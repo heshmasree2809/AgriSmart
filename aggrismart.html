@@ -45,10 +45,6 @@
         </div>
     </div>
 </header>
-
-
-
-
 <nav>
   <a href="AggriSmart_Home.html">Home</a>
   <a href="#">Buy Vegetables</a>
@@ -78,10 +74,36 @@
     <p>Get the right fertilizers for your crops.</p>
   </div>
 </div>
+<script>
+// Search bar enter key detection
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector('input[placeholder="Search for Vegetables.."]');
+    searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            alert("Searching for: " + searchInput.value);
+        }
+    });
+
+    // Login button alert
+    const loginBtn = document.querySelector("button");
+    loginBtn.addEventListener("click", function () {
+        alert("Login/Sign-Up functionality coming soon!");
+    });
+
+    // Cart icon click alert
+    const cartIcon = document.querySelector("div[style*='🛒']");
+    cartIcon.addEventListener("click", function () {
+        alert("Your cart is currently empty.");
+    });
+});
+</script>
+</body>
 
 <footer>
   © 2025 AgriSmart | Built for Smart Farmers
 </footer>
 
-</body>
+
 </html>
+
